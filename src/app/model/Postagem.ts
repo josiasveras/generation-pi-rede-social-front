@@ -7,6 +7,7 @@ export class Postagem{
     public conteudo: string
     public valor: number
     public proposta: string
+    public localizacao: string
 
     public usuario: Usuario
     public tema: Tema

@@ -1,10 +1,11 @@
 export class UserLogin{
-    private id: number
-    private nome: string
-    private usuario: string
-    private senha: string
-    private token: string
-    private tipo: string
-    private foto: string
+    public id: number
+    public nome: string
+    public usuario: string
+    public senha: string
+    public token: string
+    public foto: string
+    public tipo: string
+
 
 }

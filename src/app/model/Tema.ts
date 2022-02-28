@@ -1,10 +1,9 @@
 import { Postagem } from "./Postagem"
 
 export class Tema{
-    private idTema: number
-    private servico: string
-    private localizacao: string
-    private descricao: string
+    public idTema: number
+    public servico: string
+    public descricao: string
 
-    private postagem: Postagem[]
+    public postagem: Postagem[]
 }
