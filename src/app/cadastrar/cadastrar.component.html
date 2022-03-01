@@ -1,2 +1,83 @@
+<div class="container-fluid">
+  <div class="row">
 
-<p>Cadastrar works!</p>
+      <div class="col-md-6" id="img-bg"></div>
+
+      <div class="col-md-6 mt-5 mb-5">
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-10">
+
+                  <h1 class="text-center">Cadastro</h1>
+
+                  <div class="form-group">
+                      <label for="nome">Nome</label>
+                      <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome"
+                      [(ngModel)]='usuario.nome'>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="usuário">Usuário</label>
+                      <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu Usuário"
+                      [(ngModel)]='usuario.usuario'>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="tipo">Gênero</label>
+                    <select class="form-control" name="tipo" id="tipo" [(ngModel)]="usuario.genero">
+                        <option>Selecione um tipo de usuário</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                  <div class="form-group">
+                      <label for="foto">Link da sua foto</label>
+                      <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto"
+                      [(ngModel)]='usuario.foto'>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <input class="form-control" type="text" name="bio" id="bio" placeholder="Escreva uma bio"
+                    [(ngModel)]='usuario.bio'>
+                </div>
+
+
+                  <div class="form-group">
+                      <label for="senha">Senha</label>
+                      <input class="form-control" type="password" name="senha" id="senha" placeholder="Sua Senha" (input)='confirmSenha($event)'>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="confirmesenha">Confirmar Senha</label>
+                      <input class="form-control" type="password" name="confirmsenha" id="confirmsenha"
+                          placeholder="Confirme sua Senha" [(ngModel)]='usuario.senha'>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="tipo">Tipo de usuário</label>
+                      <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                          <option>Selecione um tipo de usuário</option>
+                          <option value="normal">Normal</option>
+                          <option value="adm">Administrador</option>
+                      </select>
+                  </div>
+
+                  <br>
+
+                  <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn btn-danger" routerLink="/entrar" style="margin-right: 4px;">Cancelar</button>
+                      <button type="submit" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+
+
+
+  </div>
+</div>
+
