@@ -13,6 +13,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { TemaComponent } from './tema/tema.component';
+import { BarraTopoComponent } from './barra-topo/barra-topo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TemaComponent } from './tema/tema.component';
     CadastrarComponent,
     SobreComponent,
     InicioComponent,
-    TemaComponent
+    TemaComponent,
+    BarraTopoComponent
   ],
   imports: [
     BrowserModule,
