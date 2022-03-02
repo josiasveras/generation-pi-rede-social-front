@@ -1,1 +1,89 @@
-<p>menu works!</p>
+<div class="wrapper">
+    <div class="sidebar">
+        <div class="logo-content">
+            <div class="logo">
+                <i class="fa fa-paw" aria-hidden="true"></i>
+                <div class="logo-name">Freelando</div>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" id="btn" (click)="menuCollapse()"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class="fa fa-search" aria-hidden="true" (click)="menuCollapse()"></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-th-large" aria-hidden="true"></i>
+                    <span class="links-name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="links-name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                    <span class="links-name">Message</span>
+                </a>
+                <span class="tooltip">Message</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                    <span class="links-name">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-folder-o" aria-hidden="true"></i>
+                    <span class="links-name">File Manager</span>
+                </a>
+                <span class="tooltip">File</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="links-name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <span class="links-name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    <span class="links-name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </ul>
+        <div class="profile-content">
+            <div class="profile">
+                <div class="profile-details">
+                    <img src="assets/img/profile-photo.jpg" alt="Imagem do usuário">
+                    <div class="name-job">
+                        <div class="name">Josias Veras</div>
+                        <div class="job">Web Designer</div>
+                    </div>
+                </div>
+                <i class="fa fa-sign-out" aria-hidden="true" id="log-out"></i>
+            </div>
+        </div>
+    </div> 
+    <div class="home-content">
+        <div class="text">Conteúdo da tela</div>
+    </div>
+</div>
