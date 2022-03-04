@@ -7,13 +7,13 @@
     box-sizing: border-box;
 }
 
-.wrapper{
+/* .wrapper{
     font-family: "Poppins", sans-serif;
     position: relative;
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
-}
+} */
 
 .sidebar{
     position: fixed;
@@ -248,9 +248,7 @@
     background: none;
 }
 
-
-
-/* Código tela de início */
+/* Código tela de início
 .home-content{
     position: absolute;
     height: 100%;
@@ -270,4 +268,5 @@
     width: calc(100% - 240px);
     left: 240px;
 }
+*/ 
 

@@ -1,4 +1,8 @@
 <!-- <app-barra-topo *ngIf='auth.logado()'></app-barra-topo> -->
-<!-- <app-menu *ngIf='auth.logado()'></app-menu> -->
-<router-outlet></router-outlet>
+<app-menu *ngIf='auth.logado()'></app-menu>
+
+<!-- <app-menu></app-menu> -->
+<router-outlet class="home-content"></router-outlet>
+
 <!-- <app-rodape *ngIf='auth.logado()'></app-rodape> -->
+<!-- <app-entrar></app-entrar> -->
