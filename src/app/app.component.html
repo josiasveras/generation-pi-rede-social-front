@@ -2,7 +2,20 @@
 <!-- <app-menu *ngIf='auth.logado()'></app-menu> -->
 
 <!-- <app-menu></app-menu> -->
-<router-outlet class="home-content"></router-outlet>
+<!-- <router-outlet class="home-content"></router-outlet> -->
 
 <!-- <app-rodape *ngIf='auth.logado()'></app-rodape> -->
 <!-- <app-entrar></app-entrar> -->
+
+<!-- Código adaptação do posicionamento do conteudo ao expandir menu -->
+<div class="container-fluid">
+    <!-- <app-menu *ngIf='auth.logado()'></app-menu> -->
+    <app-menu class="sidebar" *ngIf='auth.logado()'></app-menu>
+    <!-- <app-menu class="sidebar"></app-menu> -->
+    <div class="home-content">
+        <router-outlet></router-outlet>
+        <app-rodape *ngIf='auth.logado()'></app-rodape>
+    </div>
+</div>
+<!-- Código adaptação do posicionamento do conteudo ao expandir menu -->
+
