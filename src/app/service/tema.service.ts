@@ -8,6 +8,9 @@ import { Tema } from '../model/Tema';
   providedIn: 'root'
 })
 export class TemaService {
+  getByIdPostagem(id: number) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http: HttpClient) { }
 
