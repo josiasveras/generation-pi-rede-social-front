@@ -176,6 +176,9 @@
               <!-- <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} ás
                 {{item.data | date: 'HH/mm'}}
               </small></p> -->
+              <a href="" class="text-info mr-3" [routerLink]="['/postagem-edit', item.idPostagem]">Editar</a>
+            <a href="" class="text-danger" [routerLink]="['/postagem-delete', item.idPostagem]">Apagar</a>
+
             </div>
           </div>
         </div>
