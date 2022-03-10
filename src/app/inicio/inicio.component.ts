@@ -28,6 +28,7 @@ export class InicioComponent implements OnInit {
   tipoUser = environment.tipo
 
 
+
   constructor(
     private router: Router,
     private temaService: TemaService,
@@ -96,6 +97,7 @@ export class InicioComponent implements OnInit {
       alert('Postagem Realizada com Sucesso!!!')
       this.postagem = new Postagem()
       this.getAllPostagens()
+      this.getAllTemas()
     })
 
   }

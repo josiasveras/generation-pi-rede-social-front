@@ -1,5 +1,5 @@
 <!-- <div class="home-content">
-  
+
   <div class="container-fluid">
 
     <div class="row bg-secondary d-flex align-items-center">
@@ -147,14 +147,14 @@
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
             <p class="card-text mt-3">{{item.conteudo}}</p>
-            <small class="text-muted">Tema:{{item.tema.servico}}</small>
-            <small class="text-muted">Tema:{{item.tema.descricao}}</small>
-            <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} ás
+           <p><small class="text-muted mt-1 fs-12"><span style="font-weight: bold;">Tema : </span>{{item.tema.servico}}</small></p>
+            <p><small class="text-muted mt-1 fs-12"><span style="font-weight: bold;">Tema : </span>{{item.tema.descricao}}</small></p>
+           <p><small class="text-muted mt-1 fs-12"><span style="font-weight: bold;"> Feito Por : </span>{{item.usuario.nome}}</small></p>
+            <p><small class="text-muted mt-1 fs-12"><span style="font-weight: bold;">Valor : </span>R${{item.valor}}</small></p>
+            <p><small class="text-muted mt-1 fs-12"><span style="font-weight: bold;">Localização : </span>{{item.localizacao}}</small></p>
+            <p class="card-text mt-1 "><small class="text-muted fs-12">{{item.data | date: 'dd/MM/yyyy'}} ás
               {{item.data | date: 'HH:mm'}}
             </small></p>
-            <small class="text-muted"> by : {{item.usuario.nome}}</small>
-            <small class="text-muted"> Preço : {{item.valor}}</small>
-            <small class="text-muted"> Feito em : {{item.localizacao}}</small>
             <!-- <small class="text-muted"> Tipo de proposta : {{item.proposta}}</small> -->
           </div>
         </div>
@@ -163,6 +163,7 @@
       <div class="card-columns" *ngIf="tipoUser != 'buscarTrabalho'">
         <div class="card text-center" *ngFor='let item of listaUsuarios'>
           <div class="card-body">
+            <img src="{{item.foto}}" alt="imagemUsuario" width="50px" height="50px" class="img-fluid rounded-circle">
             <h5 class="card-title m-0">{{item.nome}}</h5>
             <p class="card-text mt-3">{{item.bio}}</p>
             <!-- <small class="text-muted">Tema:{{item.tema.servico}}</small>
@@ -170,9 +171,9 @@
             <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} ás
               {{item.data | date: 'HH:mm'}}
             </small></p>
-            <small class="text-muted"> by : {{item.usuario.nome}}</small>
-            <small class="text-muted"> Preço : {{item.valor}}</small>
-            <small class="text-muted"> Feito em : {{item.localizacao}}</small> -->
+            <small class="text-muted"> by : {{item.nome}}</small>
+            <small class="text-muted"> Preço : {{item.postagem.valor}}</small>
+            <small class="text-muted"> Feito em : {{item.postagem.localizacao}}</small> -->
             <!-- <small class="text-muted"> Tipo de proposta : {{item.proposta}}</small> -->
           </div>
         </div>
@@ -194,9 +195,9 @@
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
             <p class="card-text mt-3">{{item.conteudo}}</p>
-            <small class="text-muted">Tema:{{item.tema.descricao}}</small>
+            <p><small class="text-muted mr-3">Tema: {{item.tema.servico}}</small></p>
             <!-- <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} ás
-                {{item.data | date: 'HH/mm'}}
+                {{item.data | date: 'HH:mm'}}
               </small></p> -->
             <a href="" class="text-info mr-3" [routerLink]="['/postagem-edit', item.idPostagem]">Editar</a>
             <a href="" class="text-danger" [routerLink]="['/postagem-delete', item.idPostagem]">Apagar</a>
@@ -222,9 +223,9 @@
               <h5 class="card-title m-0">{{postagem.titulo}}</h5>
               <p class="card-text mt-3">{{postagem.conteudo}}</p>
               <p class="card-text"><small class="text-muted">{{postagem.data | date: 'dd/MM/yyyy'}} ás
-                {{postagem.data | date: 'HH/mm'}}
+                {{postagem.data | date: 'HH:mm'}}
               </small></p>
-              <small class="text-muted"> Tema : {{tema.descricao}}</small>
+              <small class="text-muted"> Tema : {{tema.servico}}</small>
             </div>
           </div>
       </div>
@@ -284,7 +285,7 @@
             <label for="tema">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um novo</a>:
             </label>
             <select class="form-control" name="tema" id="tema" [(ngModel)]="idTema" (change)="findByIdTema()">
-              <option *ngFor="let item of listaTemas" value="{{item.idTema}}">{{item.descricao}}
+              <option *ngFor="let item of listaTemas" value="{{item.idTema}}">{{item.servico}}
               </option>
             </select>
           </div>

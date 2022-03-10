@@ -21,6 +21,10 @@ html {
   font-size: 18pt;
 }
 
+.fs-12 {
+  font-size : 12pt;
+}
+
 .sidebar{
   position: fixed;
   z-index: 98;
@@ -247,7 +251,7 @@ html {
   font-size: 20px;
   border-radius: 12px;
   text-align: center;
-  transition: all 0.4s ease; 
+  transition: all 0.4s ease;
   background: #1d1b31;
 }
 
@@ -256,7 +260,7 @@ html {
   background: none;
 }
 
-/* Código adaptação do posicionamento do conteudo ao expandir menu */ 
+/* Código adaptação do posicionamento do conteudo ao expandir menu */
 .home-content{
   position: absolute;
   height: 100%;
