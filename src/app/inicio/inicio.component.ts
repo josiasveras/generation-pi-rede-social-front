@@ -24,6 +24,8 @@ export class InicioComponent implements OnInit {
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
+  listaUsuarios: Usuario[]
+  tipoUser = environment.tipo
 
 
   constructor( 
@@ -45,14 +47,20 @@ export class InicioComponent implements OnInit {
     this.authService.refreshToken()
     this.getAllPostagens()
     this.getAllTemas()
+    this.getAllUsuarios()
 
-    this.getAllTemas()
+  }
 
+  getAllUsuarios(){
+    this.authService.getAllUsuarios().subscribe((resp: Usuario[]) => {
+      this.listaUsuarios = resp
+    })
   }
   
     getAllTemas() {
       this.temaService.getAllTema().subscribe((resp : Tema[])=>{
       this.listaTemas = resp
+      console.log(this.listaTemas)
       })
     }
 

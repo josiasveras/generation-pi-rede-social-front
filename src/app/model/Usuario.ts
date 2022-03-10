@@ -9,6 +9,7 @@ export class Usuario{
     public foto: string
     public bio: string
     public tipo: string
+    public profissao: string
 
     public postagem: Postagem[]
 }

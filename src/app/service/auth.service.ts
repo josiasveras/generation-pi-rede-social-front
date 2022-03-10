@@ -39,6 +39,10 @@ export class AuthService {
     return this.http.get<Usuario>(`https://piredesocial.herokuapp.com/usuarios/buscar/${id}`, this.token)
   }
 
+  getAllUsuarios(): Observable<Usuario[]>{
+    return this.http.get<Usuario[]>('https://piredesocial.herokuapp.com/usuarios/buscar/tudo', this.token)
+  }
+
 
   logado() {
     let ok: boolean = false
