@@ -14,13 +14,12 @@ export class CadastrarComponent implements OnInit {
   confirmarSenha: string
   tipoUsuario: string
 
-
   constructor(
     private authservice: AuthService,
     private router: Router
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
 
     window.scroll(0, 0)
   }
@@ -35,15 +34,14 @@ export class CadastrarComponent implements OnInit {
 
   }
 
-
   cadastrar() {
     this.usuario.tipo = this.tipoUsuario
 
-    if (this.usuario.foto == '' || this.usuario.foto == null){
-      this.usuario.foto = 'https://i.imgur.com/rNUV85x.png'
+    if (this.usuario.foto == '' || this.usuario.foto == null) {
+      this.usuario.foto = "https://i.imgur.com/rNUV85x.png";
     }
 
-    if (this.usuario.senha != this.confirmarSenha ) {
+    if (this.usuario.senha != this.confirmarSenha) {
       alert('senhas incorretas')
     } else {
       this.authservice.cadastrar(this.usuario).subscribe((resp: Usuario) => {
@@ -52,7 +50,5 @@ export class CadastrarComponent implements OnInit {
         this.router.navigate(['/entrar'])
       })
     }
-    }
-
-
+  }
 }
