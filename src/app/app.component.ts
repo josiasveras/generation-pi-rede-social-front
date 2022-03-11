@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { AuthService } from './service/auth.service';
 
 @Component({
@@ -9,7 +11,8 @@ import { AuthService } from './service/auth.service';
 export class AppComponent {
   sidebar: any
   constructor(
-    public auth: AuthService
+    public auth: AuthService,
+    private router: Router
   ){}
 
   menuCollapse() {
@@ -21,5 +24,13 @@ export class AppComponent {
 
     // this.sidebar.classList.toggle("active");
     // alert("Olá mundo!!");
+  }
+
+  sair() {
+    this.router.navigate(["/entrar"]);
+    environment.token = '';
+    environment.nome = '';
+    environment.id = 0;
+    environment.foto = '';
   }
 }
