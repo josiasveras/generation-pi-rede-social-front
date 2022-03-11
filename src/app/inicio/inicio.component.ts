@@ -49,7 +49,8 @@ export class InicioComponent implements OnInit {
     this.getAllPostagens()
     this.getAllTemas()
     this.getAllUsuarios()
-
+    // console.log(environment.nome)
+    // console.log(environment.foto)
   }
 
   getAllUsuarios() {

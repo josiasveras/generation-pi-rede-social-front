@@ -10,6 +10,9 @@ import { AuthService } from './service/auth.service';
 })
 export class AppComponent {
   sidebar: any
+  nome = environment.nome
+  foto = environment.foto
+  
   constructor(
     public auth: AuthService,
     private router: Router
