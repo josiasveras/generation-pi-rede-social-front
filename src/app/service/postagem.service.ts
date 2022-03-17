@@ -17,7 +17,7 @@ export class PostagemService {
     }
   
     getAllPostagens(): Observable<Postagem[]>{
-      // return this.http.get<Postagem[]>('http://localhost:8080/postagens', this.token)
+      // return this.http.get<Postagem[]>('http://localhost:8080/postagens/buscar', this.token)
         return this.http.get<Postagem[]>('https://piredesocial.herokuapp.com/postagens/buscar', this.token)
     }
   
