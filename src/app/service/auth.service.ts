@@ -40,6 +40,7 @@ export class AuthService {
   }
 
   getAllUsuarios(): Observable<Usuario[]>{
+   // return this.http.get<Usuario[]>('http://localhost:8080/usuarios/buscar/tudo', this.token)
     return this.http.get<Usuario[]>('https://piredesocial.herokuapp.com/usuarios/buscar/tudo', this.token)
   }
 
