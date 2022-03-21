@@ -9,9 +9,11 @@ import { AuthService } from './service/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  sidebar: any
-  nome = environment.nome
-  foto = environment.foto
+
+  sidebar: any;
+  id = environment.id;
+  nome = environment.nome;
+  foto = environment.foto;
   
   constructor(
     public auth: AuthService,
@@ -19,6 +21,11 @@ export class AppComponent {
   ){}
 
   menuCollapse() {
+    //Refresh Usuário
+    this.id = environment.id;
+    this.nome = environment.nome;
+    this.foto = environment.foto;
+
     // let btn = document.querySelector("#btn");
     this.sidebar = document.querySelector(".sidebar");
     // let searchBtn = document.querySelector(".fa-search");
